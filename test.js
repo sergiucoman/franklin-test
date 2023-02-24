@@ -1,4 +1,3 @@
-
 function intoCards(main) {
 
  main.querySelectorAll(".rows > div")
@@ -28,4 +27,14 @@ function intoCards(main) {
 
 }
 
+function pop(main) {
+ main.querySelectorAll(".rows > .column").forEach(column => {
+   column.style.display = "block";
+ })
+}
+
 intoCards(document.querySelector("main"));
+
+await new Promise(r => setTimeout(r, 50));
+
+pop(document.querySelector("main"));
